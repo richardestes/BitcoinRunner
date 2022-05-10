@@ -8,9 +8,6 @@ public class PlayerController : MonoBehaviour
     public float jumpPower = 50f;
     [Range(0.25f, 0.75f)]
     public float decelerationPower = .25f;
-    [Range(1f,4f)]
-    public float jetpackRayLength = 2f;
-    public GameObject jetpackRay;
     public bool isGameOver = false;
     public TextMeshProUGUI gameOverText;
 
@@ -31,16 +28,6 @@ public class PlayerController : MonoBehaviour
                 SceneManager.LoadScene("Main");
             }
         }
-
-        RaycastHit2D jetpackHit = Physics2D.Raycast(jetpackRay.transform.position, Vector2.down, jetpackRayLength);
-        Debug.DrawRay(jetpackRay.transform.position, Vector2.down * jetpackRayLength, Color.red);
-
-        if (jetpackHit.collider.CompareTag("Tree"))
-        {
-            print("Hit tree");
-            Destroy(jetpackHit.collider.gameObject);
-        }
-
     }
 
     void FixedUpdate()
@@ -58,8 +45,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gameOverText.gameObject.SetActive(true);
-        isGameOver = true;
-        //Destroy(this);
+        print("Player hit:" + collision.gameObject.name);
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            gameOverText.gameObject.SetActive(true);
+            isGameOver = true;
+        }
     }
 }

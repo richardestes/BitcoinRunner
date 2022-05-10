@@ -5,10 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - SpikeBoundary
-  - OutOfBounds
-  - Spike
   - Tree
+  - Jetpack
+  - Floor
+  - Ceiling
+  - Obstacle
+  - ScoreManager
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Destroyable
   - 
   - 
   - 
