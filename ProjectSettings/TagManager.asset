@@ -8,6 +8,7 @@ TagManager:
   - SpikeBoundary
   - OutOfBounds
   - Spike
+  - Tree
   layers:
   - Default
   - TransparentFX

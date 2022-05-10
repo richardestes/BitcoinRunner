@@ -26,10 +26,12 @@ public class MapGenerator : MonoBehaviour
 
     private void Start()
     {
+        //TODO: Loopify this shit
         obstacle1 = GenerateObstacle(player.transform.position.x + 10f);
         obstacle2 = GenerateObstacle(obstacle1.transform.position.x);
         obstacle3 = GenerateObstacle(obstacle2.transform.position.x);
         obstacle4 = GenerateObstacle(obstacle3.transform.position.x);
+        //TODO: Spawn trees at start of run
     }
 
     GameObject GenerateObstacle(float referenceX)
