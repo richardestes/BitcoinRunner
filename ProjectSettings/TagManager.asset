@@ -11,6 +11,7 @@ TagManager:
   - Ceiling
   - Obstacle
   - ScoreManager
+  - GameManager
   layers:
   - Default
   - TransparentFX
