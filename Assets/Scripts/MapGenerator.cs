@@ -49,6 +49,7 @@ public class MapGenerator : MonoBehaviour
 
     void Update()
     {
+        // TODO: Loop background(s) 
         // Update Position of Floor/Ceiling for seamless level
         if (player.transform.position.x > floor.transform.position.x) // Player has passed boundary of ceiling/floor
         {

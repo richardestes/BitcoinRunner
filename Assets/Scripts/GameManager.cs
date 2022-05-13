@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     }
 
+    // TODO: Fix this
     public void SwitchLevel()
     {
         SceneManager.LoadScene("Level2");
