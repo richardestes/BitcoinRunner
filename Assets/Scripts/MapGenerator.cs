@@ -7,6 +7,9 @@ public class MapGenerator : MonoBehaviour
     public GameObject ceiling;
     public GameObject floor;
 
+    public GameObject prevBackground;
+    public GameObject background;
+
     public GameObject obstaclePrefab;
     public GameObject obstacle1;
     public GameObject obstacle2;
@@ -31,7 +34,8 @@ public class MapGenerator : MonoBehaviour
         obstacle2 = GenerateObstacle(obstacle1.transform.position.x);
         obstacle3 = GenerateObstacle(obstacle2.transform.position.x);
         obstacle4 = GenerateObstacle(obstacle3.transform.position.x);
-        //TODO: Spawn trees at start of run
+
+        //TODO: Spawn harvestables at start of run
     }
 
     GameObject GenerateObstacle(float referenceX)
@@ -49,18 +53,21 @@ public class MapGenerator : MonoBehaviour
 
     void Update()
     {
-        // TODO: Loop background(s) 
-        // Update Position of Floor/Ceiling for seamless level
-        if (player.transform.position.x > floor.transform.position.x) // Player has passed boundary of ceiling/floor
+        // Update Position of Floor/Ceiling/BG for seamless level
+        if (player.transform.position.x > (floor.transform.position.x -8.2f)) // Player has passed halfway through current section
         {
             var tempCeiling = prevCeiling;
             var tempFloor = prevFloor;
+            //var tempBg = prevBackground;
             prevCeiling = ceiling;
             prevFloor = floor;
-            tempCeiling.transform.position += new Vector3(80, 0, 0);
-            tempFloor.transform.position += new Vector3(80, 0, 0);
+            //prevBackground = background;
+            tempCeiling.transform.position += new Vector3(37.7f, 0, 0);
+            tempFloor.transform.position += new Vector3(37.7f, 0, 0);
+            //tempBg.transform.position += new Vector3(38.36f, 0, 20);
             ceiling = tempCeiling;
             floor = tempFloor;
+            //background = tempBg;
         }
         // Update position of obstacles
         if (player.transform.position.x > obstacle2.transform.position.x)
