@@ -12,6 +12,8 @@ TagManager:
   - Obstacle
   - ScoreManager
   - GameManager
+  - FloorTrigger
+  - CeilingTrigger
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Water
   - UI
   - Destroyable
-  - 
+  - Background
   - 
   - 
   - 
