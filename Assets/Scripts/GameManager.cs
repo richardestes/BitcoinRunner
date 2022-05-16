@@ -5,22 +5,25 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public int currentLevel;
 
     private void Start()
     {
         scoreText.text = ScoreManager.score.ToString();
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
+        print("Current level: " + currentLevel);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab)) SwitchLevel();
-
+        if (ScoreManager.score >= 200 && currentLevel == 0) SwitchLevel(1);
+        if (ScoreManager.score >= 500 && currentLevel == 1) SwitchLevel(2);
+        if (ScoreManager.score >= 1000 && currentLevel == 2) SwitchLevel(3);
     }
 
-    // TODO: Fix this
-    public void SwitchLevel()
+    public void SwitchLevel(int levelIndex)
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene(levelIndex);
     }
 
     public void IncreaseScore(int amount)
