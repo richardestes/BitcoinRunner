@@ -19,7 +19,7 @@ public class ShopDialogueManager : MonoBehaviour
     {
         //if (!gameManager) gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         //if (!scoreManager) scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
-        bitcoinCounter.SetText(""+ScoreManager.score);
+        bitcoinCounter.SetText(""+ScoreManager.availableCoins);
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class ShopDialogueManager : MonoBehaviour
         //print(message+"\n");
         TextWindow.GetComponent<TextMeshProUGUI>().SetText(message);
         //Handles updating the bitcoin if we haven't already done so
-        bitcoinCounter.SetText(""+ScoreManager.score);
+        bitcoinCounter.SetText(""+ScoreManager.availableCoins);
 
     }
 
@@ -50,8 +50,12 @@ public class ShopDialogueManager : MonoBehaviour
     }
 
     public void TestShopFunctionalitySceneLoader() {
-        ScoreManager.score=0;
-        SceneManager.LoadScene("Level1");
+        if(GameManager.currentLevel==1) {
+            SceneManager.LoadScene("Level2");
+        }
+        if(GameManager.currentLevel==2) {
+            SceneManager.LoadScene("Level3");
+        }
         
     }
 

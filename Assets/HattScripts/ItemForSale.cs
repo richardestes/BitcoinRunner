@@ -78,8 +78,8 @@ public class ItemForSale : MonoBehaviour
     }
 
     public void spendBitcoin() {
-        if(ScoreManager.score >= itemCost) {
-            ScoreManager.score -= itemCost;
+        if(ScoreManager.availableCoins >= itemCost) {
+            ScoreManager.availableCoins -= itemCost;
             purchaseEffects();
             shopManager.GetComponent<ShopDialogueManager>().sendDialogueWindowText(purchaseText);
         }

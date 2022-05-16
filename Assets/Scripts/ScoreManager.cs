@@ -4,6 +4,7 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public static int score = 0;
+    public static int availableCoins = 0;
     private GameManager gameManager;
 
     private void Start()
@@ -14,14 +15,17 @@ public class ScoreManager : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         score += amount;
+        availableCoins += amount;
         Mathf.Clamp(score, 0, 1000);
-        gameManager.UpdateScoreText(score);
+        Mathf.Clamp(availableCoins, 0, 1000);
+        gameManager.UpdateScoreText(availableCoins);
     }
 
     public void DecreaseScore(int amount)
     {
         score -= amount;
-        Mathf.Clamp(score, 0, 1000);
-        gameManager.UpdateScoreText(score);
+        availableCoins -= amount;
+        Mathf.Clamp(availableCoins, 0, 1000);
+        gameManager.UpdateScoreText(availableCoins);
     }
 }
