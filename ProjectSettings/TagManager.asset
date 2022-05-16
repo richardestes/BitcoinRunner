@@ -14,6 +14,7 @@ TagManager:
   - FloorTrigger
   - CeilingTrigger
   - Harvestable
+  - SFXManager
   layers:
   - Default
   - TransparentFX

@@ -46,10 +46,6 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         print("Player hit:" + collision.gameObject.name);
-        //if (collision.gameObject.CompareTag("Obstacle"))
-        //{
-        //    gameOverText.gameObject.SetActive(true);
-        //    isGameOver = true;
-        //}
+        // TODO: Handle player HP
     }
 }

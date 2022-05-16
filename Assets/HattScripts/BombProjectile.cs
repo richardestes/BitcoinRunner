@@ -27,18 +27,17 @@ public class BombProjectile : MonoBehaviour
 
     public GameObject explosion;
 
+    public SFXManager sfxManager;
 
     // Start is called before the first frame update
     void Start()
     {
 
-         if (!gameManager) gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        
+        if (!gameManager) gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        if (!sfxManager) sfxManager = GameObject.FindGameObjectWithTag("SFXManager").GetComponent<SFXManager>();
+
         transform.Translate(offsetPosition);
-
-        //Failsafe on failure to collide
-
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 5); //Failsafe on failure to collide
     }
 
     // Update is called once per frame
@@ -73,23 +72,23 @@ public class BombProjectile : MonoBehaviour
        //}
     }
 
-       private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        //print("Collided with "+collision.ToString()+"\n");
         if (collision.gameObject.CompareTag("Harvestable"))
         {
             Vector3 tempLoc = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
             gameManager.IncreaseScore(10);
+            collision.gameObject.GetComponent<Harvestable>().Harvest();
             Destroy(collision.gameObject);
             Instantiate(explosion, tempLoc, Quaternion.identity);
-            Destroy(this.gameObject);
         }
         //Destroys object if it hits a obstacle or the background
         else if (collision.gameObject.CompareTag("CeilingTrigger") || collision.gameObject.CompareTag("FloorTrigger") || collision.gameObject.CompareTag("Obstacle"))
         {
             Vector3 tempLoc = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
             Instantiate(explosion, tempLoc, Quaternion.identity);
-            Destroy(this.gameObject);
         }
+        sfxManager.PlayBombSFX();
+        Destroy(this.gameObject);
     }
 }

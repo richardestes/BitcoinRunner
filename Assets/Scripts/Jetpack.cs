@@ -13,6 +13,7 @@ public class Jetpack : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Harvestable"))
         {
+            collision.gameObject.GetComponent<Harvestable>().Harvest();
             gameManager.IncreaseScore(10);
             Destroy(collision.gameObject);
         }
