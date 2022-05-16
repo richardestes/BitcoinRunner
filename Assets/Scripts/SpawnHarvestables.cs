@@ -17,8 +17,6 @@ public class SpawnHarvestables : MonoBehaviour
         spawnDistance = Random.Range(3f, 10f);
         GameObject harvestableObj = Instantiate(harvestablePrefabs[randomIndex]);
         harvestableObj.transform.position = new Vector3(transform.position.x + spawnDistance, transform.position.y + 0.1f);
-        float randomScale = Random.Range(0.8f, 1.2f);
-        harvestableObj.transform.localScale = new Vector3(randomScale, randomScale, 1);
     }
 
     IEnumerator HarvestableWave()
