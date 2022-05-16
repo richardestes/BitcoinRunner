@@ -16,10 +16,12 @@ public class BombLaunch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(1) && trackedTime >= cooldownTime)
-        {
-            Instantiate(bomb, this.transform);
-            trackedTime = 0;
+        if(GameManager.grenadeLauncherEnabled) {
+            if (Input.GetMouseButtonUp(1) && trackedTime >= cooldownTime)
+            {
+                Instantiate(bomb, this.transform);
+                trackedTime = 0;
+            }
         }
         trackedTime += Time.deltaTime;
     }
