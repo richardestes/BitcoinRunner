@@ -11,7 +11,7 @@ public class Jetpack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Tree"))
+        if (collision.gameObject.CompareTag("Harvestable"))
         {
             gameManager.IncreaseScore(10);
             Destroy(collision.gameObject);

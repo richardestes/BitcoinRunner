@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BombLaunch : MonoBehaviour
@@ -18,20 +16,12 @@ public class BombLaunch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-                 if (Input.GetMouseButtonUp(1) && trackedTime >= cooldownTime)
+        if (Input.GetMouseButtonUp(1) && trackedTime >= cooldownTime)
         {
             Instantiate(bomb, this.transform);
             trackedTime = 0;
         }
         trackedTime += Time.deltaTime;
-    }
-       void FixedUpdate() {
-        /**
-         if (Input.GetMouseButtonUp(1))
-        {
-            Instantiate(bomb, this.transform);
-        }
-        **/
     }
 
 }

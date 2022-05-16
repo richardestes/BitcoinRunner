@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BombProjectile : MonoBehaviour
@@ -47,9 +45,7 @@ public class BombProjectile : MonoBehaviour
     void Update()
     {
 
-
-
-        transform.position += transform.right * thrownForce * Time.deltaTime;
+        transform.position += thrownForce * Time.deltaTime * transform.right;
         thrownForce -= thrownForceDropOff;
 
         this.GetComponent<Rigidbody2D>().AddForce(transform.up * initialVertical);
@@ -80,11 +76,11 @@ public class BombProjectile : MonoBehaviour
        private void OnTriggerEnter2D(Collider2D collision)
     {
         //print("Collided with "+collision.ToString()+"\n");
-        if (collision.gameObject.CompareTag("Tree"))
+        if (collision.gameObject.CompareTag("Harvestable"))
         {
             Vector3 tempLoc = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
-            //gameManager.IncreaseScore(10);
-            //Destroy(collision.gameObject);
+            gameManager.IncreaseScore(10);
+            Destroy(collision.gameObject);
             Instantiate(explosion, tempLoc, Quaternion.identity);
             Destroy(this.gameObject);
         }
