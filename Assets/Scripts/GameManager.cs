@@ -37,19 +37,22 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (ScoreManager.score >= 200 && currentLevel == 0) {
+        if (ScoreManager.score >= 200 && currentLevel == 1) {
             currentLevel++;
             SceneManager.LoadScene("Shop");
             //SwitchLevel(1);
         }
-        if (ScoreManager.score >= 500 && currentLevel == 1) {
+        if (ScoreManager.score >= 500 && currentLevel == 2) {
             currentLevel++;
             SceneManager.LoadScene("Shop");
             //SwitchLevel(1);
         }
 
-        //if (ScoreManager.score >= 500 && currentLevel == 1) SwitchLevel(2);
-        if (ScoreManager.score >= 1000 && currentLevel == 2) SwitchLevel(3);
+        if (ScoreManager.score >= 1000 && currentLevel == 3)
+        {
+            SceneManager.LoadScene("End");
+        }
+
     }
 
     public void SwitchLevel(int levelIndex)

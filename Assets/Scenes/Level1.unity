@@ -293,53 +293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1486852795
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1486852796}
-  - component: {fileID: 1486852797}
-  m_Layer: 0
-  m_Name: ObstacleSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1486852796
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486852795}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.25, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2042743850}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1486852797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486852795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c0bfe33372c42241851f6d27ce415e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaclePrefabs:
-  - {fileID: 2113498379567819708, guid: 6f2a46c662763194e9f4d63c013053d3, type: 3}
-  spawnDistance: 4
 --- !u!1 &1538303597
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,11 +450,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683449093}
   m_CullTransparentMesh: 1
---- !u!4 &2042743850 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3953786982903685100, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
-  m_PrefabInstance: {fileID: 3953786983420450208}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1722103218118931726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -792,6 +740,10 @@ PrefabInstance:
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 766368236}
+    - target: {fileID: 5254577135206181902, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
 --- !u!1001 &4056174180844296769
@@ -858,6 +810,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4695176637945280372, guid: bed3ca88a3132c641aeb22d81d93fd83, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4695176637945280373, guid: bed3ca88a3132c641aeb22d81d93fd83, type: 3}
       propertyPath: m_RootOrder
       value: 5

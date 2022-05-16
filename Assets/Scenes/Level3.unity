@@ -282,6 +282,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1430100013930727133, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: obstaclePrefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430100013930727133, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: obstaclePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2113498379567819708, guid: 6f2a46c662763194e9f4d63c013053d3, type: 3}
+    - target: {fileID: 1430100013930727133, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: obstaclePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2113498379567819708, guid: 7148ecdc37e885d478918bba71405d47, type: 3}
     - target: {fileID: 3953786982903685097, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -572,6 +584,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4695176637945280372, guid: bed3ca88a3132c641aeb22d81d93fd83, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4695176637945280372, guid: bed3ca88a3132c641aeb22d81d93fd83, type: 3}
       propertyPath: m_Volume
       value: 0.4

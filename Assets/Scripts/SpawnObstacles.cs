@@ -16,7 +16,7 @@ public class SpawnObstacles : MonoBehaviour
         int randomIndex = Random.Range(0, obstaclePrefabs.Length - 1);
         spawnDistance = Random.Range(3f, 10f);
         GameObject obstacleObj = Instantiate(obstaclePrefabs[randomIndex]);
-        float randomYPosition = Random.Range(-1f, 3f);
+        float randomYPosition = Random.Range(-2f, 3f);
         obstacleObj.transform.position = new Vector3(transform.position.x + spawnDistance, randomYPosition);
         float randomScale = Random.Range(0.8f, 1.2f);
         obstacleObj.transform.localScale = new Vector3(randomScale, randomScale, 1);

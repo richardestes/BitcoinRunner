@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4c4057f75e651fc41aad22c74022ab5a
+guid: 7b74a9a1600d5f14bbb568cd0ae24f07
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cripto_Chicken_02_0
+      name: FlameTest_01_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 31
-        height: 64
+        width: 12
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34709bc0a2f544f4bb1fcc2801e73d72
-      internalID: -538418118
+      spriteID: d830347241edcbe4e9407681fc707296
+      internalID: -1508959596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cripto_Chicken_02_1
+      name: FlameTest_01_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 31
-        height: 32
+        x: 18
+        y: 0
+        width: 12
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e41819da57c9214997014d180799367
-      internalID: -1562030165
+      spriteID: a226cd6ea472f6343bc2322a71ea2b06
+      internalID: 1241390120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cripto_Chicken_02_2
+      name: FlameTest_01_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 0
-        width: 31
-        height: 32
+        width: 12
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +160,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dac5d0562acec924f993b0c789c4d4bc
-      internalID: -1983076952
+      spriteID: 50583bf799706014fbd90d8c9bea8cc5
+      internalID: 341539874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameTest_01_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafa7027d33db4849b552e1ffd99d271
+      internalID: 971097704
       vertices: []
       indices: 
       edges: []
@@ -177,9 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cripto_Chicken_02_0: -538418118
-      Cripto_Chicken_02_1: -1562030165
-      Cripto_Chicken_02_2: -1983076952
+      FlameTest_01_3: 971097704
+      FlameTest_01_2: 341539874
+      FlameTest_01_1: 1241390120
+      FlameTest_01_0: -1508959596
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

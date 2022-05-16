@@ -206,6 +206,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1430100013930727133, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: obstaclePrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430100013930727133, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: obstaclePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2113498379567819708, guid: 7148ecdc37e885d478918bba71405d47, type: 3}
+    - target: {fileID: 1430100013930727133, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: obstaclePrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 3917002588004655873, guid: 75e0eca5894ee0e4bbd73127b06c26f2, type: 3}
+    - target: {fileID: 1430100013930727133, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: obstaclePrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 3917002588004655873, guid: 75e0eca5894ee0e4bbd73127b06c26f2, type: 3}
+    - target: {fileID: 1430100013930727133, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: obstaclePrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 3917002588004655873, guid: 75e0eca5894ee0e4bbd73127b06c26f2, type: 3}
+    - target: {fileID: 1430100013930727133, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: obstaclePrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 3917002588004655873, guid: 75e0eca5894ee0e4bbd73127b06c26f2, type: 3}
     - target: {fileID: 3953786982903685097, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -259,9 +283,21 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3953786982983630493, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: harvestablePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8845170588639787753, guid: 145ca5b70aa801541b84c198c7e64f09, type: 3}
+    - target: {fileID: 3953786982983630493, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: harvestablePrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 3917002588004655873, guid: 0783b0b903321034ab08c463e9d87f89, type: 3}
+    - target: {fileID: 3953786982983630493, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
+      propertyPath: harvestablePrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 3917002588004655873, guid: 17d2fc5ae1c46764fa35fa3e0049c89c, type: 3}
+    - target: {fileID: 3953786982983630493, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
       propertyPath: harvestablePrefabs.Array.data[4]
       value: 
-      objectReference: {fileID: 3917002588004655873, guid: 75e0eca5894ee0e4bbd73127b06c26f2, type: 3}
+      objectReference: {fileID: 3917002588004655873, guid: 16b9361284bb58b4ca9c8409c3c32d16, type: 3}
     - target: {fileID: 3953786983212304344, guid: 812d77aeaa92bde469cc3457b1f8a2b6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -368,6 +404,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4695176637945280372, guid: bed3ca88a3132c641aeb22d81d93fd83, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4695176637945280372, guid: bed3ca88a3132c641aeb22d81d93fd83, type: 3}
       propertyPath: m_audioClip
       value: 

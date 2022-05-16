@@ -50,10 +50,10 @@ public class ShopDialogueManager : MonoBehaviour
     }
 
     public void TestShopFunctionalitySceneLoader() {
-        if(GameManager.currentLevel==1) {
+        if(GameManager.currentLevel==2) {
             SceneManager.LoadScene("Level2");
         }
-        if(GameManager.currentLevel==2) {
+        if(GameManager.currentLevel==3) {
             SceneManager.LoadScene("Level3");
         }
         
